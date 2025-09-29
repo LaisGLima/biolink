@@ -123,12 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     });
 
- 
-    document.getElementById('bioButton').addEventListener('click', function() {
-        window.location.href = 'https://wa.me/5585985297269';
-    });
-    
-
     if (typeof ScrollReveal !== 'undefined') {
         ScrollReveal().reveal('header', {
             origin: 'top',
