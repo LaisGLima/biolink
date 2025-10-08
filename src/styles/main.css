@@ -143,6 +143,9 @@ i {
 
 
 @media (max-width: 638px) {
+    #redes {
+        gap: 20px;
+    }
     #mais {
     width: 460px;
     }
@@ -151,6 +154,17 @@ i {
     }
     #cards {
         overflow-x: auto; 
+    }
+    #nome {
+        font-size: 1.5rem;
+    }
+
+    span{
+        font-size: 0.9rem;
+    }
+
+    #social-media-buttons {
+        font-size: 1.1rem;
     }
 }
 
