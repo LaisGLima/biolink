@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
 
-        if(scrollY > 0.5){ 
+        if(scrollY > 0){ 
             if (buttonContent) buttonContent.style.background = 'transparent';
         } else {
             if (buttonContent) buttonContent.style.background = 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))';
