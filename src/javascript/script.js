@@ -160,13 +160,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const buttonContent = document.getElementById('button-content');
 
+    const bioButton = document.getElementById('bioButton'); 
+    const bioUrl = 'https://wa.me/5585992622326'; 
+
+    if (bioButton) {
+        if (!bioButton.hasAttribute('tabindex')) bioButton.setAttribute('tabindex', '0');
+        bioButton.setAttribute('aria-label', 'Adquira seu cartão visita');
+
+        bioButton.style.cursor = 'pointer';
+
+        bioButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (!clickAllowed) return;
+            window.open(bioUrl, '_blank', 'noopener,noreferrer');
+        });
+
+        bioButton.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                if (!clickAllowed) return;
+                window.open(bioUrl, '_blank', 'noopener,noreferrer');
+            }
+        });
+    }
+
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
 
-        if(scrollY > 50){ // a partir de 50px de scroll, fundo some
-            buttonContent.style.background = 'transparent';
+        if(scrollY > 0.5){ 
+            if (buttonContent) buttonContent.style.background = 'transparent';
         } else {
-            buttonContent.style.background = 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))';
+            if (buttonContent) buttonContent.style.background = 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))';
         }
     });
 });
