@@ -36,6 +36,8 @@ header {
         background-position: bottom;  
     }
     #perfil {
+        width: 115px;
+        height: 115px;
         bottom: -60px; 
     }
 }
